@@ -1,0 +1,192 @@
+----------------------------------------------------------------
+2016-12-19 14:23:51.040 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance a816c00e-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:51.768 GMT:
+Shutting down instance a816c00e-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:51.836 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 08264012-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:52.334 GMT:
+Shutting down instance 08264012-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+2016-12-19 14:23:52.343 GMT Thread[AWT-EventQueue-0,6,main] Cleanup action starting
+java.sql.SQLException: Database 'c:\haplayer\db\' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.happy.db.DBUtils.close(DBUtils.java:68)
+	at com.happy.db.BaseDataDB.<init>(BaseDataDB.java:94)
+	at com.happy.db.BaseDataDB.getBaseDataDB(BaseDataDB.java:141)
+	at com.happy.util.DataUtil.initBaseData(DataUtil.java:43)
+	at com.happy.util.DataUtil.init(DataUtil.java:25)
+	at com.happy.enterProgram.EnterProgram.init(EnterProgram.java:54)
+	at com.happy.enterProgram.EnterProgram$1.run(EnterProgram.java:43)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: java.sql.SQLException: Database 'c:\haplayer\db\' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 35 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Database 'c:\haplayer\db\' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at com.happy.db.DBUtils.close(DBUtils.java:68)
+	at com.happy.db.BaseDataDB.<init>(BaseDataDB.java:94)
+	at com.happy.db.BaseDataDB.getBaseDataDB(BaseDataDB.java:141)
+	at com.happy.util.DataUtil.initBaseData(DataUtil.java:43)
+	at com.happy.util.DataUtil.init(DataUtil.java:25)
+	at com.happy.enterProgram.EnterProgram.init(EnterProgram.java:54)
+	at com.happy.enterProgram.EnterProgram$1.run(EnterProgram.java:43)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+----------------------------------------------------------------
+2016-12-19 14:23:52.400 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 40348015-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:52.666 GMT:
+Shutting down instance 40348015-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:52.745 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance b8450018-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:53.053 GMT:
+Shutting down instance b8450018-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:53.146 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 185e801c-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:53.485 GMT:
+Shutting down instance 185e801c-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:53.600 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 6074401f-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:53.972 GMT:
+Shutting down instance 6074401f-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:54.099 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance a094c023-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:54.425 GMT:
+Shutting down instance a094c023-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:54.518 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance e8afc026-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:54.836 GMT:
+Shutting down instance e8afc026-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:23:54.940 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 00cd0029-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:23:55.234 GMT:
+Shutting down instance 00cd0029-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:27:20.989 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 98ec802c-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:27:21.555 GMT:
+Shutting down instance 98ec802c-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
+----------------------------------------------------------------
+2016-12-19 14:27:21.643 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 610e402f-0159-1777-9756-00000a5c1f50
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2016-12-19 14:27:22.163 GMT:
+Shutting down instance 610e402f-0159-1777-9756-00000a5c1f50
+----------------------------------------------------------------
