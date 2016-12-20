@@ -231,7 +231,7 @@ public class LyricsPanel extends JPanel implements Observer {
 					|| songMessage.getType() == SongMessage.ERRORMUSIC
 					|| songMessage.getType() == SongMessage.SERVICEERRORMUSIC) {
 				refreshUI(songMessage);
-			} else if (songMessage.getType() == SongMessage.LRCKSCLOADED) {
+			} else if (songMessage.getType() == SongMessage.LRCLOADED) {
 				if (mSongInfo == null)
 					return;
 				if (!mSongInfo.getSid().equals(songMessage.getSid())) {
@@ -241,7 +241,7 @@ public class LyricsPanel extends JPanel implements Observer {
 				String sid = songMessage.getSid();
 
 				initKscLrc(sid, kscFilePath, mSongInfo.getDuration(), true);
-			} else if (songMessage.getType() == SongMessage.LRCKSCDOWNLOADED) {
+			} else if (songMessage.getType() == SongMessage.LRCDOWNLOADED) {
 				if (mSongInfo == null)
 					return;
 				if (!mSongInfo.getSid().equals(songMessage.getSid())) {
@@ -269,7 +269,7 @@ public class LyricsPanel extends JPanel implements Observer {
 
 				LyricsUtil.loadLyrics(mSongInfo.getSid(), mSongInfo.getTitle(),
 						mSongInfo.getSinger(), mSongInfo.getDisplayName(),
-						mSongInfo.getLyricsUrl(), SongMessage.KSCTYPELRC);
+						mSongInfo.getLyricsUrl(), SongMessage.LRCTYPELRC);
 
 				manyLineLyricsView.setHasLrc(false);
 

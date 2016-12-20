@@ -40,25 +40,24 @@ public class SongMessage {
 
 	public static final int SINGERPHOTOLOADED = (i++); // 歌手写真图片加载完成
 	public static final int ALUBMPHOTOLOADED = (i++); // 歌曲专辑图片加载完成
-	public static final int KSCDOWNLOADED = (i++); // ksc歌词下载完成
-	public static final int KSCLOADED = (i++); // ksc歌词加载完成
+	public static final int LRCDOWNLOADED = (i++); // 歌词下载完成
+	public static final int LRCLOADED = (i++); // 歌词加载完成
 
 	public static final int DESLRCSHOWORHIDE = (i++); // 桌面歌词显示或者隐藏
 	public static final int DESLRCSHOWORHIDEED = (i++); // 桌面歌词显示或者隐藏完成
 	public static final int DESLRCLOCKORUNLOCK = (i++); // 桌面歌词锁定或者解锁
 	public static final int DESLRCLOCKORUNLOCKED = (i++); // 桌面歌词锁定或者解锁完成
 
-	public static final int KSCTYPELRC = (i++); // lrcview ksc歌词
-	public static final int LRCKSCDOWNLOADED = (i++); // lrcview ksc歌词下载完成
-	public static final int LRCKSCLOADED = (i++); // lrcview ksc歌词下载完成
+	public static final int LRCTYPELRC = (i++); // lrcview 歌词
 
-	public static final int KSCTYPEDES = (i++); // 桌面 ksc歌词
-	public static final int DESKSCDOWNLOADED = (i++); // 桌面 ksc歌词下载完成
-	public static final int DESKSCLOADED = (i++); // 桌面 ksc歌词下载完成
 
-	public static final int KSCTYPELOCK = (i++); // 锁屏ksc歌词
-	public static final int LOCKKSCDOWNLOADED = (i++); // 锁屏 ksc歌词下载完成
-	public static final int LOCKKSCLOADED = (i++); // 锁屏 ksc歌词下载完成
+	public static final int LRCTYPEDES = (i++); // 桌面 歌词
+	public static final int DESDOWNLOADED = (i++); // 桌面 歌词下载完成
+	public static final int DESLOADED = (i++); // 桌面 歌词下载完成
+
+	public static final int LRCTYPELOCK = (i++); // 锁屏歌词
+	public static final int LOCKDOWNLOADED = (i++); // 锁屏 歌词下载完成
+	public static final int LOCKLOADED = (i++); // 锁屏 歌词下载完成
 
 	/**
 	 * 歌曲为空报错信息
@@ -75,7 +74,7 @@ public class SongMessage {
 
 	private int progress = 0;// 进度
 	private String lrcFilePath; // lrc歌词路径
-	private String sid;// ksc歌词所属的sid
+	private String sid;// 歌词所属的sid
 
 	public int getType() {
 		return type;

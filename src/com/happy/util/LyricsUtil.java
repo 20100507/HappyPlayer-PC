@@ -37,27 +37,35 @@ public class LyricsUtil {
 
 				File lrcFile = new File(lrcFilePath);
 				if (!lrcFile.exists()) {
-					return null;
-				} else {
 
-					SongMessage songMessage = new SongMessage();
+					lrcFilePath = Constants.PATH_LYRICS + File.separator
+							+ displayName + ".ksc";
 
-					if (type == SongMessage.KSCTYPELRC) {
-
-						songMessage.setType(SongMessage.LRCKSCLOADED);
-					} else if (type == SongMessage.KSCTYPEDES) {
-
-						songMessage.setType(SongMessage.DESKSCLOADED);
-					} else if (type == SongMessage.KSCTYPELOCK) {
-
-						songMessage.setType(SongMessage.LOCKKSCLOADED);
+					lrcFile = new File(lrcFilePath);
+					if (!lrcFile.exists()) {
+						return null;
 					}
 
-					songMessage.setLrcFilePath(lrcFilePath);
-					songMessage.setSid(sid);
-					// 通知
-					ObserverManage.getObserver().setMessage(songMessage);
 				}
+
+				SongMessage songMessage = new SongMessage();
+
+				if (type == SongMessage.LRCTYPELRC) {
+
+					songMessage.setType(SongMessage.LRCLOADED);
+				} else if (type == SongMessage.LRCTYPEDES) {
+
+					songMessage.setType(SongMessage.DESLOADED);
+				} else if (type == SongMessage.LRCTYPELOCK) {
+
+					songMessage.setType(SongMessage.LOCKLOADED);
+				}
+
+				songMessage.setLrcFilePath(lrcFilePath);
+				songMessage.setSid(sid);
+				// 通知
+				ObserverManage.getObserver().setMessage(songMessage);
+
 				return null;
 
 			}
