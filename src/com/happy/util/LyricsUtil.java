@@ -67,7 +67,6 @@ public class LyricsUtil {
 				ObserverManage.getObserver().setMessage(songMessage);
 
 				return null;
-
 				
 			}
 
