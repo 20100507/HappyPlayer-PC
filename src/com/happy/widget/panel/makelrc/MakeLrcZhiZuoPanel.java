@@ -507,6 +507,10 @@ public class MakeLrcZhiZuoPanel extends JPanel implements Observer {
 		for (int i = 0; i < lrcComTxt.length(); i++) {
 			char c = lrcComTxt.charAt(i);
 			if (CharUtils.isChinese(c)) {
+				if (!temp.equals("")) {
+					lrcStack.push(temp);
+					temp = "";
+				}
 				lrcStack.push(String.valueOf(c));
 			} else if (Character.isSpaceChar(c)) {
 				if (!temp.equals("")) {
