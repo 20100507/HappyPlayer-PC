@@ -82,6 +82,10 @@ public class Constants {
 	 */
 	public final static String APPTITLE = "乐乐音乐";
 	/**
+	 * 歌词格式
+	 */
+	public final static String LYRICSTYPE = "hrcx";
+	/**
 	 * app提示语
 	 */
 	public final static String APPTIPTITLE = "乐乐" + getYear() + ",传播好的音乐";

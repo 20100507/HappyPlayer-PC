@@ -10,6 +10,8 @@
 #hrc (happy lyrics)歌词
 乐乐第二个版本，使用自定义的歌词格式文件hrc (happy lyrics) 。
 该版本可自制歌词并生成hrc歌词，它与酷狗krc比较，感觉还是不错的，占空间小了好多。
+#hrcx (happy lyrics)歌词
+hrc歌词的优化
 #krc酷狗歌词
 #3.界面设计
 主界面

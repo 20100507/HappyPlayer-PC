@@ -239,7 +239,7 @@ public class ListViewHeadPanel extends JPanel {
 				height / 2, height / 2);
 
 		addPop = new JPopupMenu();
-		addSongMenu = new JMenuItem("添加歌曲");
+		addSongMenu = new JMenuItem("添加歌曲文件夹");
 		addSongFiledMenu = new JMenuItem("添加歌曲文件");
 
 		delPlaylistMenu = new JMenuItem("删除播放列表");

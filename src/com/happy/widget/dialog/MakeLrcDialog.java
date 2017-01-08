@@ -269,9 +269,10 @@ public class MakeLrcDialog extends JDialog {
 
 						LyricsInfo lyricsInfo = new LyricsInfo();
 						Map<String, Object> tags = new HashMap<String, Object>();
-						tags.put(LyricsTag.TAG_SINGER, songInfo.getSinger());
-						tags.put(LyricsTag.TAG_SONGNAME, songInfo.getTitle());
+						tags.put(LyricsTag.TAG_ARTIST, songInfo.getSinger());
+						tags.put(LyricsTag.TAG_TITLE, songInfo.getTitle());
 						tags.put(LyricsTag.TAG_OFFSET, 0);
+						tags.put(LyricsTag.TAG_TOTAL, songInfo.getDuration());
 						tags.put(LyricsTag.TAG_BY, Constants.APPNAME);
 						lyricsInfo.setLyricsTags(tags);
 
@@ -331,7 +332,7 @@ public class MakeLrcDialog extends JDialog {
 					if (lyricsInfo != null) {
 						File hrcFile = new File(Constants.PATH_LYRICS
 								+ File.separator + songInfo.getDisplayName()
-								+ ".hrc");
+								+ "." + Constants.LYRICSTYPE);
 
 						LyricsFileWriter lyricsFileWriter = LyricsInfoIO
 								.getLyricsFileWriter(hrcFile);
@@ -343,13 +344,14 @@ public class MakeLrcDialog extends JDialog {
 									.showMessageDialog(MakeLrcDialog.this,
 											"歌词文件保存成功", "提示",
 											JOptionPane.PLAIN_MESSAGE);
-							
+
 							// 通知
 							MessageIntent messageIntent = new MessageIntent();
-							messageIntent.setAction(MessageIntent.CLOSE_MAKELRCDIALOG);
-							ObserverManage.getObserver().setMessage(messageIntent);
-							
-							
+							messageIntent
+									.setAction(MessageIntent.CLOSE_MAKELRCDIALOG);
+							ObserverManage.getObserver().setMessage(
+									messageIntent);
+
 							close();
 						} else {
 							JOptionPane
