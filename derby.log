@@ -160,3 +160,23 @@ Database Class Loader started - derby.database.classpath=''
 2017-01-08 09:44:14.912 GMT:
 Shutting down instance e8afc026-0159-7d76-b67b-00000a5bd208
 ----------------------------------------------------------------
+----------------------------------------------------------------
+2017-01-08 09:50:34.792 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 00cd0029-0159-7d76-b67b-00000a5bd208
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2017-01-08 09:50:35.043 GMT:
+Shutting down instance 00cd0029-0159-7d76-b67b-00000a5bd208
+----------------------------------------------------------------
+----------------------------------------------------------------
+2017-01-08 09:50:35.149 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instance 98ec802c-0159-7d76-b67b-00000a5bd208
+on database directory C:\haplayer\db  
+
+Database Class Loader started - derby.database.classpath=''
+
+2017-01-08 09:50:35.763 GMT:
+Shutting down instance 98ec802c-0159-7d76-b67b-00000a5bd208
+----------------------------------------------------------------

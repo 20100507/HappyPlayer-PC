@@ -49,46 +49,51 @@ public class MediaUtils {
 			String durationStr = TimeUtils.parseString((int) duration);
 
 			songInfo = new SongInfo();
+		       // 文件名
+            String displayName = FileUtils.removeExt(sourceFile.getName());
+            String artist = trackData.getArtist();
+            String title = trackData.getTitle();
 
-			// 文件名
-			String displayName = FileUtils.removeExt(sourceFile.getName());
-			String artist = trackData.getArtist();
-			String title = trackData.getTitle();
-			if (title == null || !title.contains("-")) {
 
-				if (displayName.contains("-")) {
-					String[] titleArr = displayName.split("-");
-					artist = titleArr[0].trim();
-					title = titleArr[1].trim();
-				} else {
-					artist = "";
-					title = displayName;
-				}
-			} else {
-				String[] titleArr = title.split("-");
-				artist = titleArr[0].trim();
-				title = titleArr[1].trim();
-			}
+            if (artist == null || (artist != null && StringUtils.isMessyCode(artist))) {
 
-			if (StringUtils.isMessyCode(artist)) {
+                if (displayName.contains("-")) {
+                    String[] titleArr = displayName.split("-");
+                    artist = titleArr[0].trim();
+                } else
+                    artist = "";
+            }
 
-				if (displayName.contains("-")) {
-					String[] titleArr = displayName.split("-");
-					artist = titleArr[0].trim();
-				} else
-					artist = "";
-			}
+            if (title == null || !title.contains("-")) {
 
-			if (StringUtils.isMessyCode(title)) {
+                if (displayName.contains("-")) {
+                    String[] titleArr = displayName.split("-");
+                    if (artist == null || artist.equals(""))
+                        artist = titleArr[0].trim();
+                    if (title == null || title.equals(""))
+                        title = titleArr[1].trim();
+                } else {
+                    artist = "";
+                    title = displayName;
+                }
+            } else {
+                String[] titleArr = title.split("-");
+                if (artist == null || artist.equals(""))
+                    artist = titleArr[0].trim();
+                title = titleArr[1].trim();
+            }
 
-				if (displayName.contains("-")) {
-					String[] titleArr = displayName.split("-");
-					title = titleArr[1].trim();
-				} else
-					title = "";
-			}
+            if (title != null && StringUtils.isMessyCode(title)) {
 
-			displayName = artist + " - " + title;
+                if (displayName.contains("-")) {
+                    String[] titleArr = displayName.split("-");
+                    title = titleArr[1].trim();
+                } else
+                    title = "";
+            }
+
+
+            displayName = artist + " - " + title;
 
 			songInfo.setSid(IDGenerate.getId("SI-"));
 			songInfo.setDisplayName(displayName);
