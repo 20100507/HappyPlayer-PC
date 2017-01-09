@@ -43,9 +43,16 @@ X轴的BoxLayout，方便点击可隐藏/展开
 - 列表下的歌曲列表Item面板：
 - 歌词面板：LyricsPanel
 多行歌词面板：ManyLineLyricsView
+桌面歌词面板
 
 #4.参考博客
 
 
 - http://blog.csdn.net/qingzi635533/article/details/30231733
 - http://www.jianshu.com/p/f6e7c8b9b2a3
+
+
+#5.效果图
+![](http://i.imgur.com/KehXwfn.jpg)
+
+![](http://i.imgur.com/N1QDJoE.jpg)
