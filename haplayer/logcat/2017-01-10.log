@@ -1,0 +1,8 @@
+2017-01-10 21:28:29 <@zhangliangming@ [com.happy.util.DataUtil:24 init] - 开始加载初始数据.....>
+2017-01-10 21:28:37 <@zhangliangming@ [com.happy.db.DBUtils:52 isTableExist] - baseDataTbl 表已经存在!不用创建!>
+2017-01-10 21:28:37 <@zhangliangming@ [com.happy.db.DBUtils:52 isTableExist] - tabVersionTbl 表已经存在!不用创建!>
+2017-01-10 21:28:39 <@zhangliangming@ [com.happy.db.DBUtils:52 isTableExist] - categoryTbl 表已经存在!不用创建!>
+2017-01-10 21:28:40 <@zhangliangming@ [com.happy.db.DBUtils:52 isTableExist] - songTbl 表已经存在!不用创建!>
+2017-01-10 21:28:41 <@zhangliangming@ [com.happy.util.DataUtil:27 init] - 初始数据加载完成.....>
+2017-01-10 21:28:41 <@zhangliangming@ [com.happy.service.MediaPlayerService:70 init] - 播放器服务启动>
+2017-01-10 21:28:52 <@zhangliangming@ [com.happy.enterProgram.EnterProgram:61 init] - 启动界面完成>
