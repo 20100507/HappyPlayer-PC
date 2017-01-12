@@ -16,8 +16,8 @@
 	<classpathentry kind="lib" path="haplayer/libs/musique/wavpack-1.1.jar"/>
 	<classpathentry kind="lib" path="haplayer/libs/derby.jar"/>
 	<classpathentry kind="lib" path="haplayer/libs/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="haplayer/libs/JPlayer-lib.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="haplayer/libs/LyricsAnalyze.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JPlayer-lib"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
